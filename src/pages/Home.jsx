@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen text-center">
+    <section
+      id="home"
+      className="flex flex-col items-center justify-center min-h-screen text-center"
+    >
       <motion.h1
         className="text-6xl font-heading text-heistRed"
         initial={{ y: 40, opacity: 0 }}

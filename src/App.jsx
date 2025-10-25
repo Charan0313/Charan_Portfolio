@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
           <About />
           <Projects/>
           <Skills />
+          <Contact/>
         </>
       )}
     </div>
