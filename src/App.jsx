@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
 import Home from "./pages/Home";
 
 export default function App() {
@@ -19,6 +22,9 @@ export default function App() {
         <>
           <Navbar />
           <Home />
+          <About />
+          <Projects/>
+          <Skills />
         </>
       )}
     </div>

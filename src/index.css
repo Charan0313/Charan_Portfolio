@@ -5,3 +5,6 @@
 body {
   @apply bg-heistBlack text-heistGray font-body;
 }
+html {
+  scroll-behavior: smooth;
+}
