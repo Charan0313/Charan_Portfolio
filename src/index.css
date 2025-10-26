@@ -2,9 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+/* === BASE THEME === */
 body {
-  @apply bg-heistBlack text-heistGray font-body;
+  @apply text-heistGray font-body;
+  background: #000;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
+}
+
+/* === MONEY HEIST PARTICLE BACKGROUND === */
+.heist-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -10;
+  pointer-events: none;
+  background: radial-gradient(circle at center, #000 60%, #0a0a0a 100%);
+}
+
+
+/* --- Red Particles --- */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(217, 4, 41, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(217, 4, 41, 0.7), 0 0 15px rgba(217, 4, 41, 0.4);
+  animation: fall var(--duration) linear infinite;
+  opacity: var(--opacity);
+  top: -10px;
+  left: var(--left);
+  transform: scale(var(--scale));
+  filter: blur(var(--blur));
+}
+
+/* --- Falling animation --- */
+@keyframes fall {
+  0% {
+    transform: translateY(0) scale(var(--scale));
+    opacity: var(--opacity);
+  }
+  100% {
+    transform: translateY(110vh) scale(var(--scale));
+    opacity: 0;
+  }
+}
+
+/* Optional subtle red glow pulse across all particles */
+.heist-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(217, 4, 41, 0.1), transparent 70%);
+  animation: redPulse 6s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+  z-index: -9;
+}
+
+@keyframes redPulse {
+  0% { opacity: 0.2; }
+  100% { opacity: 0.6; }
+}
+
+/* === Optional Faint Image Overlay === */
+.heist-overlay {
+  position: fixed;
+  inset: 0;
+  background: url("/assets/moneyheist-bg.jpg") center/cover no-repeat;
+  opacity: 0.05;
+  z-index: -8;
+  pointer-events: none;
+}
+
+/* === Glow Text === */
+.text-glow {
+  text-shadow: 0 0 10px rgba(217, 4, 41, 0.8), 0 0 20px rgba(217, 4, 41, 0.5);
 }
