@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
@@ -13,7 +14,7 @@ export default function App() {
 
   // Loader
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2500);
+    const timer = setTimeout(() => setLoading(false), 3500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -65,14 +66,19 @@ export default function App() {
       {loading ? (
         <Loader />
       ) : (
-        <div className="relative z-10 text-heistGray">
+        <motion.div 
+          className="relative z-10 text-heistGray"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <Navbar />
           <Home />
           <About />
           <Projects />
           <Skills />
           <Contact />
-        </div>
+        </motion.div>
       )}
     </>
   );

@@ -6,10 +6,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-heistBlack text-heistGray flex flex-col justify-between px-8 py-8 relative overflow-hidden"
+      className="min-h-screen text-heistGray flex flex-col justify-between px-8 py-8 relative overflow-hidden"
     >
-      {/* Background Grid */}
-      <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle_at_center,_#D90429_1px,_transparent_1px)] bg-[length:28px_28px] pointer-events-none"></div>
+      {/* Background Grid - Enhanced */}
+      <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_center,_#D90429_1px,_transparent_1px)] bg-[length:28px_28px] pointer-events-none"></div>
 
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row items-center justify-center flex-grow gap-10 py-6 w-full max-w-6xl mx-auto">
@@ -34,7 +34,7 @@ export default function Contact() {
           {/* Name & Specializations */}
           <motion.div
             className="mt-5 text-center max-w-sm"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }}        
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
@@ -42,7 +42,7 @@ export default function Contact() {
               Charan Polisetty
             </h3>
             <p className="text-heistGray/90 text-base md:text-lg font-body tracking-wide mt-2 leading-relaxed">
-              Software Engineer&nbsp;|&nbsp;Full Stack Developer&nbsp;|&nbsp;Competitive Programmer
+              Software Engineer&nbsp;|&nbsp;Web & App Developer&nbsp;|&nbsp;Competitive Programmer
             </p>
           </motion.div>
         </motion.div>

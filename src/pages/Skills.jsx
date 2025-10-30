@@ -11,10 +11,10 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen bg-heistBlack text-heistGray flex flex-col items-center justify-center px-8 py-24 relative overflow-hidden"
+      className="min-h-screen text-heistGray flex flex-col items-center justify-center px-8 py-24 relative overflow-hidden"
     >
-      {/* Background Grid */}
-      <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle_at_center,_#D90429_1px,_transparent_1px)] bg-[length:25px_25px] pointer-events-none"></div>
+      {/* Background Grid - Enhanced */}
+      <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_center,_#D90429_1px,_transparent_1px)] bg-[length:25px_25px] pointer-events-none"></div>
 
       {/* Title */}
       <motion.h2

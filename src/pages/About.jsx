@@ -4,12 +4,12 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col justify-center items-center bg-heistBlack text-heistGray px-6 py-24 relative overflow-hidden"
+      className="min-h-screen flex flex-col justify-center items-center text-heistGray px-6 py-24 relative overflow-hidden"
     >
-      {/* Background Grid */}
-      <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_center,_#D90429_1px,_transparent_1px)] bg-[length:30px_30px] pointer-events-none"></div>
+     
+      <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_center,_#D90429_1px,_transparent_1px)] bg-[length:30px_30px] pointer-events-none"></div>
 
-      {/* Title */}
+      
       <motion.h2
         className="text-6xl font-heading text-heistRed mb-16 tracking-widest text-center drop-shadow-[0_0_10px_#D90429]"
         initial={{ opacity: 0, y: 50 }}

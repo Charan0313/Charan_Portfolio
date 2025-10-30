@@ -16,7 +16,7 @@ const projects = [
     description:
       "AI-powered web platform to redistribute unused, sealed medicines. Integrated OCR for 95%+ data accuracy and AI-based matching for optimal distribution.",
     tech: "React.js, Node.js, Django, Supabase, FastAPI, GCP",
-    github: "https://github.com/",
+    github: "https://github.com/Charan0313/MediiShare",
   },
   {
     name: "Balance Beats",
@@ -24,7 +24,7 @@ const projects = [
     description:
       "Mobile health and wellness app with chatbot assistance and emergency alerts based on stress levels. Built with real-time Firebase integration.",
     tech: "Flutter, Dart, Firebase, Java",
-    github: "https://github.com/",
+    github: "https://github.com/Charan0313/balencebeats",
   },
 ];
 
@@ -32,8 +32,10 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-heistBlack text-heistGray flex flex-col items-center justify-center px-6 py-24"
+      className="min-h-screen text-heistGray flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden"
     >
+      {/* Background Grid */}
+      <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_center,_#D90429_1px,_transparent_1px)] bg-[length:35px_35px] pointer-events-none"></div>
       {/* Title */}
       <motion.h2
         className="text-6xl font-heading text-heistRed/90 mb-12 tracking-wide text-center drop-shadow-[0_0_5px_#8B0000]"
