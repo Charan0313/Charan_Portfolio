@@ -87,6 +87,194 @@ html {
   text-shadow: 0 0 10px rgba(217, 4, 41, 0.8), 0 0 20px rgba(217, 4, 41, 0.5);
 }
 
+/* === ENHANCED BACKGROUND EFFECTS === */
+
+/* Animated Geometric Shapes */
+.geometric-shape {
+  position: absolute;
+  border: 2px solid rgba(217, 4, 41, 0.15);
+  border-radius: 10px;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  right: 10%;
+  animation: float 20s ease-in-out infinite;
+  transform: rotate(45deg);
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  left: 5%;
+  animation: float 15s ease-in-out infinite reverse;
+  transform: rotate(30deg);
+}
+
+.shape-3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 15%;
+  animation: float 18s ease-in-out infinite;
+  transform: rotate(60deg);
+}
+
+.shape-4 {
+  width: 250px;
+  height: 250px;
+  bottom: 10%;
+  right: 20%;
+  animation: float 22s ease-in-out infinite reverse;
+  transform: rotate(15deg);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-30px) translateX(20px) rotate(65deg);
+  }
+}
+
+/* Noise Texture */
+.noise-texture {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  animation: noise 8s steps(10) infinite;
+}
+
+@keyframes noise {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -5%); }
+  20% { transform: translate(-10%, 5%); }
+  30% { transform: translate(5%, -10%); }
+  40% { transform: translate(-5%, 15%); }
+  50% { transform: translate(-10%, 5%); }
+  60% { transform: translate(15%, 0); }
+  70% { transform: translate(0, 10%); }
+  80% { transform: translate(-15%, 0); }
+  90% { transform: translate(10%, 5%); }
+}
+
+/* Diagonal Lines Pattern */
+.diagonal-lines {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(217, 4, 41, 0.03) 35px,
+    rgba(217, 4, 41, 0.03) 37px
+  );
+  animation: slideLines 30s linear infinite;
+}
+
+@keyframes slideLines {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+/* Hexagon Pattern */
+.hexagon-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 50% 50%, transparent 30%, rgba(217, 4, 41, 0.02) 31%, transparent 32%),
+    radial-gradient(circle at 0% 50%, transparent 30%, rgba(217, 4, 41, 0.02) 31%, transparent 32%),
+    radial-gradient(circle at 100% 50%, transparent 30%, rgba(217, 4, 41, 0.02) 31%, transparent 32%);
+  background-size: 80px 140px;
+  background-position: 0 0, 40px 70px, 40px 70px;
+  opacity: 0.5;
+  animation: hexMove 40s linear infinite;
+}
+
+@keyframes hexMove {
+  0% {
+    background-position: 0 0, 40px 70px, 40px 70px;
+  }
+  100% {
+    background-position: 80px 140px, 120px 210px, 120px 210px;
+  }
+}
+
+/* Gradient Orbs */
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  mix-blend-mode: screen;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(217, 4, 41, 0.4), transparent);
+  top: -200px;
+  left: -200px;
+  animation: orbitOrb1 25s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 0, 0, 0.3), transparent);
+  bottom: -150px;
+  right: -150px;
+  animation: orbitOrb2 30s ease-in-out infinite;
+}
+
+.orb-3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(217, 4, 41, 0.25), transparent);
+  top: 50%;
+  left: 50%;
+  animation: orbitOrb3 35s ease-in-out infinite;
+}
+
+@keyframes orbitOrb1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(100px, 150px) scale(1.2);
+  }
+}
+
+@keyframes orbitOrb2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-80px, -120px) scale(1.3);
+  }
+}
+
+@keyframes orbitOrb3 {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  33% {
+    transform: translate(-60%, -40%) scale(1.1);
+  }
+  66% {
+    transform: translate(-40%, -60%) scale(0.9);
+  }
+}
+
 /* === LOADER ANIMATIONS === */
 .loader-grid {
   background-image: 

@@ -3,16 +3,43 @@ import { Github, Linkedin, Mail, Instagram } from "lucide-react";
 import charanImg from "../assets/charan.jpg";
 
 export default function Contact() {
+  const socialLinks = [
+    {
+      icon: <Linkedin size={28} />,
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/charan-polisetty",
+      color: "hover:border-blue-500/50",
+    },
+    {
+      icon: <Github size={28} />,
+      label: "GitHub",
+      url: "https://github.com/Charan0313",
+      color: "hover:border-purple-500/50",
+    },
+    {
+      icon: <Instagram size={28} />,
+      label: "Instagram",
+      url: "https://instagram.com/charan._.ssc",
+      color: "hover:border-pink-500/50",
+    },
+    {
+      icon: <Mail size={28} />,
+      label: "Email",
+      url: "mailto:charan.ssc006@gmail.com",
+      color: "hover:border-red-500/50",
+    },
+  ];
+
   return (
     <section
       id="contact"
-      className="min-h-screen text-heistGray flex flex-col justify-between px-8 py-8 relative overflow-hidden"
+      className="min-h-screen text-heistGray flex flex-col justify-between px-4 sm:px-6 md:px-8 py-8 sm:py-12 relative overflow-hidden"
     >
-      {/* Background Grid - Enhanced */}
+      {/* Background Grid */}
       <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_center,_#D90429_1px,_transparent_1px)] bg-[length:28px_28px] pointer-events-none"></div>
 
       {/* Main Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-center flex-grow gap-10 py-6 w-full max-w-6xl mx-auto">
+      <div className="flex flex-col lg:flex-row items-center justify-center flex-grow gap-10 lg:gap-16 py-6 w-full max-w-6xl mx-auto">
         {/* Left Side — Charan’s Photo + Info */}
         <motion.div
           className="flex flex-col justify-center items-center lg:items-center lg:w-1/2 text-center"
@@ -55,53 +82,48 @@ export default function Contact() {
           transition={{ duration: 1 }}
         >
           {/* Title */}
-          <h2 className="text-4xl md:text-5xl font-heading text-heistRed/90 mb-4 tracking-widest drop-shadow-[0_0_5px_#8B0000] text-center lg:text-left">
-            The Escape Route
-          </h2>
-
-          {/* Subtitle */}
-          <p className="text-heistGray/80 font-body text-base md:text-lg leading-relaxed mb-8 text-center lg:text-left max-w-md">
-            You can reach me through any of the channels below.
-          </p>
+          <div className="text-center lg:text-left mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-heistRed/90 mb-3 tracking-widest drop-shadow-[0_0_5px_#8B0000]">
+              The Escape Route
+            </h2>
+            <p className="text-heistGray/70 text-sm sm:text-base font-body max-w-md">
+              Ready to collaborate on your next big project? Let's connect.
+            </p>
+          </div>
 
           {/* Contact Cards */}
-          <div className="grid grid-cols-2 gap-5 w-full max-w-md">
-            {[
-              {
-                icon: <Linkedin size={28} />,
-                label: "LinkedIn",
-                url: "https://www.linkedin.com/in/charan-polisetty",
-              },
-              {
-                icon: <Github size={28} />,
-                label: "GitHub",
-                url: "https://github.com/Charan0313",
-              },
-              {
-                icon: <Instagram size={28} />,
-                label: "Instagram",
-                url: "https://instagram.com/charan._.ssc",
-              },
-              {
-                icon: <Mail size={28} />,
-                label: "Email",
-                url: "mailto:charan.ssc006@gmail.com",
-              },
-            ].map((item, index) => (
+          <div className="grid grid-cols-2 gap-4 sm:gap-5 w-full max-w-md">
+            {socialLinks.map((item, index) => (
               <motion.a
                 key={index}
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center p-5 rounded-2xl bg-gradient-to-br from-[#121212] to-[#1f1f1f] border border-heistRed/40 shadow-[0_0_15px_#D9042920] hover:shadow-[0_0_20px_#D90429a0] backdrop-blur-md transition-all duration-500 group hover:scale-105"
-                whileHover={{ y: -3 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -5, scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`relative flex flex-col items-center justify-center p-5 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#121212] to-[#1f1f1f] border-2 border-heistRed/40 shadow-[0_0_15px_#D9042920] hover:shadow-[0_0_30px_#D90429a0] backdrop-blur-md transition-all duration-500 group overflow-hidden ${item.color}`}
               >
-                <div className="text-heistGray/80 group-hover:text-heistRed transition-colors duration-300">
-                  {item.icon}
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-5">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#D90429_1px,_transparent_1px)] bg-[length:15px_15px]"></div>
                 </div>
-                <span className="mt-2 text-sm font-body group-hover:text-heistRed transition-colors duration-300">
+                
+                <motion.div
+                  className="text-heistGray/80 group-hover:text-heistRed transition-colors duration-300 relative z-10"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {item.icon}
+                </motion.div>
+                <span className="mt-3 text-xs sm:text-sm font-body text-heistGray/70 group-hover:text-heistRed transition-colors duration-300 font-semibold relative z-10">
                   {item.label}
                 </span>
+                
+                {/* Hover Glow */}
+                <div className="absolute inset-0 bg-heistRed/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </motion.a>
             ))}
           </div>

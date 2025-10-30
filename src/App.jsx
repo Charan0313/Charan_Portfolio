@@ -40,6 +40,20 @@ export default function App() {
           background: "radial-gradient(circle at center, #000 60%, #0a0a0a 100%)",
         }}
       >
+        {/* Animated Geometric Shapes */}
+        <div className="absolute inset-0">
+          <div className="geometric-shape shape-1"></div>
+          <div className="geometric-shape shape-2"></div>
+          <div className="geometric-shape shape-3"></div>
+          <div className="geometric-shape shape-4"></div>
+        </div>
+
+        {/* Diagonal Lines Pattern */}
+        <div className="diagonal-lines"></div>
+
+        {/* Floating Hexagons */}
+        <div className="hexagon-pattern"></div>
+
         {/* Red Particles */}
         {particles.map((p) => (
           <span
@@ -57,6 +71,11 @@ export default function App() {
 
         {/* Soft glow pulse */}
         <div className="absolute inset-0 z-[-9] bg-[radial-gradient(circle_at_center,rgba(217,4,41,0.1),transparent_70%)] animate-[redPulse_6s_ease-in-out_infinite_alternate]" />
+        
+        {/* Animated Gradient Orbs */}
+        <div className="gradient-orb orb-1"></div>
+        <div className="gradient-orb orb-2"></div>
+        <div className="gradient-orb orb-3"></div>
       </div>
 
       {/* Faint optional image overlay */}
