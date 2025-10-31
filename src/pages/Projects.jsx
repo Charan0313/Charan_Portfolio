@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Code2 } from "lucide-react";
+import { Github, ExternalLink, Code2, Smartphone } from "lucide-react";
 
 const projects = [
   {
@@ -8,7 +8,8 @@ const projects = [
     description:
       "Deployed app with 1K+ downloads connecting users with sports academies. Built front-end using Flutter and REST APIs for communication.",
     tech: ["Flutter", "Dart", "GetX", "REST APIs"],
-    github: "https://github.com/Charan0313",
+    link: "https://play.google.com/store/apps/details?id=org.netgains.tidasports&pcampaignid=web_share",
+    linkType: "playstore",
     icon: "🏆",
   },
   {
@@ -17,7 +18,8 @@ const projects = [
     description:
       "AI-powered web platform to redistribute unused, sealed medicines. Integrated OCR for 95%+ data accuracy and AI-based matching for optimal distribution.",
     tech: ["React.js", "Node.js", "Django", "Supabase", "FastAPI", "GCP"],
-    github: "https://github.com/Charan0313/MediiShare",
+    link: "https://github.com/Charan0313/MediiShare",
+    linkType: "github",
     icon: "💊",
   },
   {
@@ -26,7 +28,8 @@ const projects = [
     description:
       "Mobile health and wellness app with chatbot assistance and emergency alerts based on stress levels. Built with real-time Firebase integration.",
     tech: ["Flutter", "Dart", "Firebase", "Java"],
-    github: "https://github.com/Charan0313/balencebeats",
+    link: "https://github.com/Charan0313/balencebeats",
+    linkType: "github",
     icon: "💚",
   },
 ];
@@ -132,16 +135,25 @@ export default function Projects() {
             {/* Action Buttons */}
             <div className="flex gap-3 mt-auto relative z-10">
               <a
-                href={project.github}
+                href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 border-2 border-heistRed text-heistRed hover:bg-heistRed hover:text-heistBlack px-4 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-[0_0_10px_#D9042940] hover:shadow-[0_0_20px_#D90429a0] group/btn"
               >
-                <Github size={18} className="group-hover/btn:rotate-12 transition-transform" />
-                <span>View Code</span>
+                {project.linkType === "playstore" ? (
+                  <>
+                    <Smartphone size={18} className="group-hover/btn:rotate-12 transition-transform" />
+                    <span>View on Play Store</span>
+                  </>
+                ) : (
+                  <>
+                    <Github size={18} className="group-hover/btn:rotate-12 transition-transform" />
+                    <span>View Code</span>
+                  </>
+                )}
               </a>
               <motion.a
-                href={project.github}
+                href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
