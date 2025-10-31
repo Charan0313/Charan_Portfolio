@@ -34,7 +34,7 @@ export default function Skills() {
         className="text-center mb-12 sm:mb-16 relative"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.4 }}
       >
         <motion.h2
           className="text-4xl sm:text-5xl md:text-6xl font-heading text-heistRed/90 tracking-widest drop-shadow-[0_0_10px_#D90429]"
@@ -45,7 +45,7 @@ export default function Skills() {
           className="text-heistGray/70 text-sm sm:text-base font-body mt-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.1 }}
         >
           Weapons of choice for digital domination
         </motion.p>

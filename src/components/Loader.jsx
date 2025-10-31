@@ -35,12 +35,12 @@ export default function Loader() {
       className="fixed inset-0 z-50 flex items-center justify-center bg-heistBlack overflow-hidden"
     >
       {/* Animated Background Grid */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-40">
         <div className="loader-grid"></div>
       </div>
 
       {/* Animated Binary/Code Background */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
+      <div className="absolute inset-0 overflow-hidden opacity-25">
         {Array.from({ length: 15 }).map((_, i) => (
           <motion.div
             key={i}
@@ -65,9 +65,9 @@ export default function Loader() {
         animate={{ scale: 1, rotate: 360 }}
         transition={{ duration: 2, ease: "easeOut" }}
       >
-        <div className="w-64 h-64 border-2 border-heistRed/30 rounded-full absolute animate-ping-slow"></div>
-        <div className="w-48 h-48 border-2 border-heistRed/50 rounded-full absolute"></div>
-        <div className="w-32 h-32 border-2 border-heistRed/70 rounded-full absolute animate-spin-slow"></div>
+        <div className="w-64 h-64 border-2 border-heistRed/40 rounded-full absolute animate-ping-slow"></div>
+        <div className="w-48 h-48 border-2 border-heistRed/60 rounded-full absolute"></div>
+        <div className="w-32 h-32 border-2 border-heistRed/80 rounded-full absolute animate-spin-slow"></div>
       </motion.div>
 
       {/* Main Content */}
@@ -136,10 +136,10 @@ export default function Loader() {
       </div>
 
       {/* Corner Decorations */}
-      <div className="absolute top-4 left-4 w-16 h-16 border-t-2 border-l-2 border-heistRed/50"></div>
-      <div className="absolute top-4 right-4 w-16 h-16 border-t-2 border-r-2 border-heistRed/50"></div>
-      <div className="absolute bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-heistRed/50"></div>
-      <div className="absolute bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-heistRed/50"></div>
+      <div className="absolute top-4 left-4 w-16 h-16 border-t-2 border-l-2 border-heistRed/70"></div>
+      <div className="absolute top-4 right-4 w-16 h-16 border-t-2 border-r-2 border-heistRed/70"></div>
+      <div className="absolute bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-heistRed/70"></div>
+      <div className="absolute bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-heistRed/70"></div>
     </motion.div>
   );
 }

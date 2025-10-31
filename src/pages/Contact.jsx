@@ -40,12 +40,12 @@ export default function Contact() {
 
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row items-center justify-center flex-grow gap-10 lg:gap-16 py-6 w-full max-w-6xl mx-auto">
-        {/* Left Side — Charan’s Photo + Info */}
+        {/* Left Side — Charan's Photo + Info */}
         <motion.div
           className="flex flex-col justify-center items-center lg:items-center lg:w-1/2 text-center"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
         >
           {/* Photo */}
           <div className="relative group flex justify-center items-center">
@@ -63,7 +63,7 @@ export default function Contact() {
             className="mt-5 text-center max-w-sm"
             initial={{ opacity: 0, y: 30 }}        
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h3 className="text-2xl md:text-3xl font-heading text-heistRed drop-shadow-[0_0_8px_#D90429] tracking-wide">
               Charan Polisetty
@@ -79,7 +79,7 @@ export default function Contact() {
           className="flex flex-col items-center lg:items-start lg:w-1/2 z-10"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
         >
           {/* Title */}
           <div className="text-center lg:text-left mb-6">
@@ -101,7 +101,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.05 }}
                 whileHover={{ y: -5, scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`relative flex flex-col items-center justify-center p-5 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#121212] to-[#1f1f1f] border-2 border-heistRed/40 shadow-[0_0_15px_#D9042920] hover:shadow-[0_0_30px_#D90429a0] backdrop-blur-md transition-all duration-500 group overflow-hidden ${item.color}`}
@@ -135,12 +135,12 @@ export default function Contact() {
         className="text-center text-xs md:text-sm text-heistGray/70 border-t border-heistRed/50 pt-3 mt-6"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: 'easeOut' }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
       >
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 1 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
         >
           “End of transmission — mission accomplished.”
         </motion.p>
@@ -148,7 +148,7 @@ export default function Contact() {
           className="mt-1 text-heistRed/90 font-heading tracking-wide"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
         >
           © 2025 Charan Polisetty
         </motion.p>

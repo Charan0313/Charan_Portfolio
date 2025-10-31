@@ -45,7 +45,7 @@ export default function Projects() {
         className="text-center mb-12 sm:mb-16"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.4 }}
       >
         <motion.h2
           className="text-4xl sm:text-5xl md:text-6xl font-heading text-heistRed/90 mb-4 tracking-wide drop-shadow-[0_0_5px_#8B0000]"
@@ -56,7 +56,7 @@ export default function Projects() {
           className="text-heistGray/70 text-sm sm:text-base font-body"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.1 }}
         >
           Elite missions executed with precision
         </motion.p>
@@ -73,7 +73,7 @@ export default function Projects() {
           visible: {
             opacity: 1,
             y: 0,
-            transition: { staggerChildren: 0.2 },
+            transition: { staggerChildren: 0.1 },
           },
         }}
       >

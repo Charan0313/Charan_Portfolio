@@ -47,7 +47,7 @@ export default function About() {
         className="text-center mb-12 sm:mb-16 relative"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.4 }}
       >
         <motion.h2
           className="text-4xl sm:text-5xl md:text-6xl font-heading text-heistRed tracking-widest drop-shadow-[0_0_10px_#D90429]"
@@ -58,7 +58,7 @@ export default function About() {
           className="text-heistGray/70 text-sm sm:text-base font-body mt-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.1 }}
         >
           Strategy, skills, and achievements
         </motion.p>
@@ -118,7 +118,7 @@ export default function About() {
                   key={idx}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1 }}
+                  transition={{ delay: idx * 0.05 }}
                 >
                   {item}
                 </motion.li>

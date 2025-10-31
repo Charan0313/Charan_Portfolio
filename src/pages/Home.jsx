@@ -22,7 +22,7 @@ export default function Home() {
         className="text-base sm:text-lg md:text-xl mt-4 font-body text-heistGray"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.8 }}
+        transition={{ delay: 0.3 }}
       >
         The Professor of Code
       </motion.p>
